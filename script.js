@@ -1,4 +1,11 @@
-import { BASE_URL, API_KEY, BACKGROUNDS, ROMAN, CHINESSE, WOCABULARY } from './consts.js'
+import {
+  BASE_URL,
+  API_KEY,
+  BACKGROUNDS,
+  ROMAN,
+  CHINESSE,
+  WOCABULARY,
+} from "./consts.js";
 
 const html = document.querySelector("html");
 const weatherCity = document.querySelector(".weather__city");
@@ -45,7 +52,6 @@ function getWeather(param) {
     method: "GET",
   })
     .then((res) => {
-
       if (res.ok) {
         return res.json();
       }
@@ -98,7 +104,6 @@ for (let i = 1; i < 13; i++) {
 }
 
 const formatTime = (number) => {
-
   if (number < 10) {
     return `0${number}`;
   }
@@ -106,14 +111,14 @@ const formatTime = (number) => {
 };
 
 function setTime() {
-  const time = new Date( new Date().getTime() - timeShift * 3600 * 1000)
+  const time = new Date(new Date().getTime() - timeShift * 3600 * 1000);
   const seconds = time.getSeconds();
   const secondsAngle = (seconds / 60) * 360 + 90;
   secondHand.style = `transform: rotate(${secondsAngle}deg)`;
   const mins = time.getMinutes();
   const minsAngle = (mins / 60) * 360 + (seconds / 60) * 6 + 90;
   minsHand.style = `transform: rotate(${minsAngle}deg)`;
-  const hours = time.getHours()
+  const hours = time.getHours();
   const hoursAngle = (hours / 12) * 360 + (mins / 60) * 30 + 90;
   hourHand.style = `transform: rotate(${hoursAngle}deg)`;
   const options = { weekday: "long", month: "long" };
@@ -122,7 +127,7 @@ function setTime() {
   const day = stringData[0];
   const date = time.getDate();
   const month = stringData[1];
-  const year = time.getFullYear()
+  const year = time.getFullYear();
   eClock.textContent = `${formatTime(hours)}:${formatTime(mins)}:${formatTime(
     seconds
   )} ${day}, ${date} ${month} ${year}`;
@@ -141,7 +146,7 @@ function toggleAdvanced() {
     advancedOpenBtnState = "open";
   }
   advancedOpenBtn.textContent =
-  WOCABULARY.advanced_openButton[advancedOpenBtnState][lang];
+    WOCABULARY.advanced_openButton[advancedOpenBtnState][lang];
 }
 
 function changeLang(e) {
@@ -158,7 +163,7 @@ function changeLang(e) {
     item.textContent = WOCABULARY.advanced_settings[index][lang];
   });
   advancedOpenBtn.textContent =
-  WOCABULARY.advanced_openButton[advancedOpenBtnState][lang];
+    WOCABULARY.advanced_openButton[advancedOpenBtnState][lang];
   getWeatherData();
 }
 
@@ -168,7 +173,6 @@ function changeColor(e) {
 
 function changeNumbers(e) {
   for (let i = 0; i < 12; i++) {
-
     if (e.target.value === "roman") {
       center.children[i].firstChild.textContent = ROMAN[i];
       center.children[i].classList.add("time-container_roman-shift");
@@ -195,21 +199,21 @@ function changeTimezone(e) {
   if (e.target.value === "geo") {
     pos = geoPosition;
     timeZone = "location";
-    timeShift = 0
+    timeShift = 0;
   } else {
     pos = e.target.value;
     timeZone = "current city";
 
-    if(e.target.value === 'london') {
-      timeShift = -(today.getTimezoneOffset()/60 + 1)
+    if (e.target.value === "london") {
+      timeShift = -(today.getTimezoneOffset() / 60 + 1);
     }
 
-    if(e.target.value === 'new york') {
-      timeShift = -(today.getTimezoneOffset()/60 - 4)
+    if (e.target.value === "new york") {
+      timeShift = -(today.getTimezoneOffset() / 60 - 4);
     }
 
-    if(e.target.value === 'tokio') {
-      timeShift = -(today.getTimezoneOffset()/60 + 9)
+    if (e.target.value === "tokio") {
+      timeShift = -(today.getTimezoneOffset() / 60 + 9);
     }
   }
   getWeatherData();
@@ -220,7 +224,6 @@ function togglePopup() {
 }
 
 function changeBackground(e) {
-
   if (!e.target.classList.contains("popup__image")) {
     return;
   }
@@ -229,7 +232,6 @@ function changeBackground(e) {
   e.target.classList.add("popup__image_selected");
   let index;
   container.forEach((item, ind) => {
-
     if (item.classList.contains("popup__image_selected")) {
       index = ind;
     }
@@ -253,14 +255,12 @@ function changeBackground(e) {
 }
 
 function popupHiddenEscape(evt) {
-
   if (evt.key === "Escape") {
     popup.classList.remove("popup_opened");
   }
 }
 
 function popupHiddenOverlay(evt) {
-
   if (evt.target.classList.contains("popup")) {
     togglePopup();
   }
