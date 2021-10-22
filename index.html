@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="author" content="Alexey Akulich" />
+    <title>JS Clock</title>
+  </head>
+  <body>
+    <div class="settings">
+      <div class="advanced">
+        <aside class="advanced__container hidden">
+          <h4 class="settings__text">Watchface:</h4>
+          <div class="advanced__item">
+          <h4 class="settings__text">Choose color:</h4>
+          <input type="color" value="#ffffff" class="settings__color" />
+        </div>
+        <h4 class="settings__text">Choose family of numbers</h4>
+          <select class="settings__numbers">
+            <option value="arabic">Arabic</option>
+            <option value="roman">Roman</option>
+            <option value="chinesse">Chinesse hieroglyphs</option>
+          </select>
+          <h4 class="settings__text">Select time zone</h4>
+            <select class="settings__timezone">
+              <option default value="geo">Your location</option>
+              <option value="london">London</option>
+              <option value="new york">New York</option>
+              <option value="tokio">Tokio</option>
+            </select>
+        </aside>
+      </div>
+      <div class="settings__container">
+        <h4 class="settings__text">Choose language</h4>
+        <div class="settings__lang">
+          <img
+            src="./assets/ru.png"
+            alt="ru-RU"
+            id="ru-RU"
+            class="settings__lang-flag"
+          />
+          <img
+            src="./assets/us.png"
+            alt="en-US"
+            id="en-US"
+            class="settings__lang-flag"
+          />
+        </div>
+      </div>
+      <button class="advanced__open-btn">Open advaced settings</button>
+      <div class="settings__container">
+        <h4 class="settings__text">Select background</h4>
+        <img
+          src="./assets/blue.jpg"
+          alt="background"
+          class="settings__background"
+        />
+      </div>
+      <div class="weather">
+        <aside class="weather__container">
+          <h3 class="weather__city"></h3>
+          <img class="weather__icon" />
+          <h4 class="weather__text"></h4>
+          <h4 class="weather__text"></h4>
+          <h4 class="weather__text"></h4>
+        </aside>
+      </div>
+    </div>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="center"></div>
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+    <h3 class="e-clock"></h3>
+    <div class="popup">
+      <div class="popup__container">
+        <img src="./assets/red.jpg" alt="red background" class="popup__image" />
+        <img
+          src="./assets/yellow.jpg"
+          alt="yellow background"
+          class="popup__image"
+        />
+        <img
+          src="./assets/green.jpg"
+          alt="green background"
+          class="popup__image"
+        />
+        <img
+          src="./assets/blue.jpg"
+          alt="blue background"
+          class="popup__image popup__image_selected"
+        />
+        <img
+          src="./assets/purple.jpg"
+          alt="purple background"
+          class="popup__image"
+        />
+        <img
+          src="./assets/brown.jpg"
+          alt="brown background"
+          class="popup__image"
+        />
+        <img
+          src="./assets/grey.jpg"
+          alt="grey background"
+          class="popup__image"
+        />
+        <img
+          src="./assets/black.jpg"
+          alt="black background"
+          class="popup__image"
+        />
+        <img
+          src="./assets/white.jpeg"
+          alt="white background"
+          class="popup__image"
+        />
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
