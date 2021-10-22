@@ -1,5 +1,5 @@
 html {
-  background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+  background: #018ded url("https://unsplash.it/1500/1000?image=881&blur=5");
   background-size: cover;
   font-family: "helvetica neue";
   text-align: center;
@@ -7,9 +7,9 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
-  font-size: 2rem;
+  font-size: 2vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,12 +23,15 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .settings {
   width: 90%;
-  padding: 1rem;
-  margin: auto;
+  padding: 1vmax;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +71,7 @@ aside {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  top: 5rem;
+  top: 5vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,15 +86,20 @@ aside {
 
 .advanced__container {
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .settings__lang {
   position: relative;
-  height: 3rem;
-  width: 4rem;
-  margin-left: 2rem;
+  height: 3vmax;
+  width: 4vmax;
+  margin-left: 2vmax;
 }
 
 h2,
@@ -115,27 +123,60 @@ h4 {
 }
 
 .settings__lang-flag_second {
-  top: 4rem;
+  top: 4vmax;
 }
 
 .settings__color,
 .settings__background {
-  height: 3rem;
-  margin-left: 2rem;
+  height: 3vmax;
+  margin-left: 2vmax;
   padding: 0;
   border: 1px solid #fff;
   cursor: pointer;
 }
 
+.settings__color {
+  width: 3vmax;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+}
+
+.settings__color::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.settings__color::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.settings__color::-moz-focus-inner {
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.settings__color::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+  height: 140px;
+}
+
 .advanced__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  margin: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1vmax 0;
 }
 
 .settings__numbers,
 .settings__timezone {
-  margin: 1rem 0;
+  margin: 1vmax 0;
   border: none;
   cursor: pointer;
 }
@@ -149,22 +190,22 @@ h4 {
 }
 
 .weather__icon {
-  width: 6rem;
-  margin: -1rem;
+  width: 6vmax;
+  margin: -1vmax;
 }
 
 .weather__text {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5vmax;
   text-shadow: 1px 1px 2px #000;
 }
 
 .clock {
   position: relative;
-  width: 30rem;
-  height: 30rem;
-  margin: 50px auto;
-  padding: 2rem;
-  border: 20px solid rgb(255, 255, 255);
+  width: 30vmax;
+  height: 30vmax;
+  margin: auto;
+  padding: 2vmax;
+  border: 2vmin solid rgb(255, 255, 255);
   border-radius: 50%;
   -webkit-backdrop-filter: brightness(0.6);
   backdrop-filter: brightness(0.6);
@@ -185,27 +226,27 @@ h4 {
 
 .center {
   position: absolute;
-  top: calc(50% - 0.5rem);
-  left: calc(50% - 0.75rem);
-  width: 1.5rem;
-  height: 1.5rem;
+  top: calc(50% - 0.5vmax);
+  left: calc(50% - 0.75vmax);
+  width: 1.5vmax;
+  height: 1.5vmax;
   border-radius: 50%;
   background: #000;
 }
 
 .time-container {
   position: absolute;
-  top: -14rem;
-  height: 30rem;
+  top: -14vmax;
+  height: 30vmax;
 }
 
 .time-container_roman-shift {
-  left: -1rem;
+  left: -1vmax;
 }
 
 .time-container_chinesse-shift {
-  left: -0.4rem;
-  top: -14.1rem;
+  left: -0.4vmax;
+  top: -14.1vmax;
 }
 
 .hand {
@@ -243,7 +284,7 @@ h4 {
 }
 
 .e-clock {
-  margin-bottom: 1rem;
+  margin-bottom: 1vmax;
 }
 
 .popup {
@@ -278,9 +319,9 @@ h4 {
 .popup__container {
   width: 75%;
   height: 90%;
-  padding: 2rem;
+  padding: 2vmax;
   margin: auto;
-  border-radius: 1rem;
+  border-radius: 1vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,8 +336,8 @@ h4 {
 .popup__image {
   max-width: 25%;
   height: 30%;
-  border: 1rem solid #fff;
-  border-radius: 1rem;
+  border: 1vmax solid #fff;
+  border-radius: 1vmax;
   cursor: pointer;
 }
 

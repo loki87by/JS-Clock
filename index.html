@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="icon" href="./assets/logo.svg">
     <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./style.css" />
     <meta name="author" content="Alexey Akulich" />
@@ -26,7 +27,7 @@
           </select>
           <h4 class="settings__text">Select time zone</h4>
             <select class="settings__timezone">
-              <option default value="geo">Your location</option>
+              <option selected="selected" value="geo">Your location</option>
               <option value="london">London</option>
               <option value="new york">New York</option>
               <option value="tokio">Tokio</option>
@@ -61,11 +62,11 @@
       </div>
       <div class="weather">
         <aside class="weather__container">
-          <h3 class="weather__city"></h3>
-          <img class="weather__icon" />
-          <h4 class="weather__text"></h4>
-          <h4 class="weather__text"></h4>
-          <h4 class="weather__text"></h4>
+          <h3 class="weather__city">city</h3>
+          <img class="weather__icon" alt="icon" src="./ " />
+          <h4 class="weather__text">weather__text</h4>
+          <h4 class="weather__text">weather__text</h4>
+          <h4 class="weather__text">weather__text</h4>
         </aside>
       </div>
     </div>
@@ -77,7 +78,7 @@
         <div class="hand second-hand"></div>
       </div>
     </div>
-    <h3 class="e-clock"></h3>
+    <h3 class="e-clock">0</h3>
     <div class="popup">
       <div class="popup__container">
         <img src="./assets/red.jpg" alt="red background" class="popup__image" />
