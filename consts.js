@@ -4,13 +4,13 @@ export const API_KEY = "b91d3843eaeb709975d89c9061d73042";
 
 export const BACKGROUNDS = [
   "#410606 url(http://ru.wallfon.com/walls/others/in-red.jpg)",
-  "#db8814 url(https://beautypic.ru/uploads/posts/2011-06/thumbs/1307444066_beautypic-ru-5.jpg)",
+  "#db8814 url(https://look.com.ua/pic/201902/2560x1440/look.com.ua-332698.jpg)",
   "#0b2810 url(https://storge.pic2.me/c/1360x800/633/54da50e4335f0.jpg)",
   "#018ded url(https://unsplash.it/1500/1000?image=881&blur=5)",
   "#000000 url(https://astro-obzor.ru/wp-content/uploads/2016/04/Purple1920x1080.jpg)",
   "#301b03 url(https://klike.net/uploads/posts/2019-11/1572946222_4.jpg)",
   "#393837 url(https://72tv.ru/uploads/posts/2018-08/medium/1534144472_zakat-rabochiy-stol.jpg)",
-  "#000000 url(http://fanoboi.com/black-white/15/city-wallpaper-1366x768.jpg)",
+  "#000000 url(https://img3.goodfon.ru/wallpaper/nbig/c/20/minimalizm-pero-kapli-chernyy.jpg)",
   "#dbf3ff url(https://xn--80aahvkuapc1be.xn--p1ai/800/600/https/ferma-biz.ru/wp-content/uploads/2017/05/sneg-oboi-zima-winter-Favim.ru-4795775.jpeg)",
 ];
 
